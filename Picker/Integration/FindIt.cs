@@ -77,6 +77,39 @@ namespace Picker
                 checkBox.isChecked = true;
             }
 
+            // Reset building level and size filters to 'All' (both Find It and Find It 2)
+            if (info is BuildingInfo)
+            {
+                FieldInfo levelFilterType = SearchBoxType.GetField("levelFilter");
+                if (levelFilterType != null)
+                {
+                    UIDropDown levelFilter = (UIDropDown)levelFilterType.GetValue(UISearchbox);
+                    levelFilter.selectedIndex = 0;
+                }
+                FieldInfo sizeFilterXType = SearchBoxType.GetField("sizeFilterX");
+                if (sizeFilterXType != null)
+                {
+                    UIDropDown sizeFilterX = (UIDropDown)sizeFilterXType.GetValue(UISearchbox);
+                    sizeFilterX.selectedIndex = 0;
+                }
+                FieldInfo sizeFilterYType = SearchBoxType.GetField("sizeFilterY");
+                if (sizeFilterYType != null)
+                {
+                    UIDropDown sizeFilterY = (UIDropDown)sizeFilterYType.GetValue(UISearchbox);
+                    sizeFilterY.selectedIndex = 0;
+                }
+            }
+
+            // Turn off custom tag filter (Find It 2 only)
+            Type FilterTagType = Type.GetType("FindIt.GUI.UIFilterTag, FindIt");
+            object UIFilterTag = SearchBoxType.GetField("tagPanel").GetValue(UISearchbox);
+            FieldInfo customTagFilterType = FilterTagType.GetField("tagDropDownCheckBox");
+            if (customTagFilterType != null)
+            {
+                UICheckBox customTagFilterCheckBox = (UICheckBox)customTagFilterType.GetValue(UIFilterTag);
+                customTagFilterCheckBox.isChecked = false;
+            }
+
             if (FISearchbox == null)
                 return;
 
