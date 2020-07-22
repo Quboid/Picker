@@ -102,12 +102,15 @@ namespace Picker
 
             // Turn off custom tag filter (Find It 2 only)
             Type FilterTagType = Type.GetType("FindIt.GUI.UIFilterTag, FindIt");
-            object UIFilterTag = SearchBoxType.GetField("tagPanel").GetValue(UISearchbox);
-            FieldInfo customTagFilterType = FilterTagType.GetField("tagDropDownCheckBox");
-            if (customTagFilterType != null)
-            {
-                UICheckBox customTagFilterCheckBox = (UICheckBox)customTagFilterType.GetValue(UIFilterTag);
-                customTagFilterCheckBox.isChecked = false;
+            if (FilterTagType != null) 
+            { 
+                object UIFilterTag = SearchBoxType.GetField("tagPanel").GetValue(UISearchbox);
+                FieldInfo customTagFilterType = FilterTagType.GetField("tagDropDownCheckBox");
+                if (customTagFilterType != null)
+                {
+                    UICheckBox customTagFilterCheckBox = (UICheckBox)customTagFilterType.GetValue(UIFilterTag);
+                    customTagFilterCheckBox.isChecked = false;
+                }
             }
 
             if (FISearchbox == null)
