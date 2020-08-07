@@ -139,7 +139,7 @@
     <value>Gefunden</value>
   </data>
   <data name="options_Unknown" xml:space="preserve">
-    <value>Unbekannt</value>
+    <value>Unknown 2</value>
   </data>
   <data name="mod_Description" xml:space="preserve">
     <value>Augentropfen Sie jedes Objekt von der Karte, von Elektrix und Quboid</value>
@@ -147,7 +147,7 @@
   <data name="keybind_ToggleTool" xml:space="preserve">
     <value>Werkzeug Umschalten</value>
   </data>
-  <data name="Tmp" xml:space="preserve">
-    <value>Temperatur</value>
+  <data name="Tmp2" xml:space="preserve">
+    <value>Temp2</value>
   </data>
 </root>
