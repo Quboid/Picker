@@ -44,7 +44,7 @@ namespace Picker
             {
                 if (_filterDropdown == null)
                 {
-                    UIDropDown filterDropdown = Searchbox.Find<UIDropDown>("UIDropDown");
+                    UIDropDown filterDropdown = Searchbox.Find<UIDropDown>("FindIt_AssetTypeFilter") ?? Searchbox.Find<UIDropDown>("UIDropDown");
                     if (filterDropdown == null)
                     {
                         Debug.Log($"Find It filters not found");
