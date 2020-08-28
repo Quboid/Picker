@@ -80,6 +80,19 @@ namespace Picker
                 FIButton.SimulateClick();
             }
 
+            // Find It 2 handles all this, thanks to sway
+            if (Picker.FindItVersion == 2)
+            {
+                FilterDropdown.selectedIndex = MenuIndex[filterEntry];
+
+                MethodInfo picker = Searchbox.GetType().GetMethod("Picker", new Type[] { typeof(PrefabInfo) });
+                if ((bool)picker.Invoke(Searchbox, new object[] { info }))
+                {
+                    return;
+                }
+                Debug.Log($"Object {info.name} not found [P02]");
+            }
+
             // Clear the text box
             UITextField TextField = Searchbox.Find<UITextField>("UITextField");
             TextField.text = "";
@@ -113,16 +126,9 @@ namespace Picker
                     }
                 }
             }
-            else if (Picker.FindItVersion == 2)
-            {
-                MethodInfo resetFilters = Searchbox.GetType().GetMethod("ResetFilters");
-                resetFilters.Invoke(Searchbox, null);
-                //MethodInfo search = Searchbox.GetType().GetMethod("Search");
-                //search.Invoke(Searchbox, null);
-            }
             else
             {
-                throw new Exception($"Find It called but not available (version:{Picker.FindItVersion})!");
+                throw new Exception($"Find It called but not available (version:{Picker.FindItVersion})! [P03]");
             }
 
             StartCoroutine(FindProcess(filterEntry, info, false, step));

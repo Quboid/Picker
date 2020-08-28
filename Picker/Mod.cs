@@ -103,12 +103,12 @@ namespace Picker
             if (PickerTool.instance != null)
             {
                 PickerTool.instance.enabled = false;
+                UnityEngine.Object.Destroy(PickerTool.instance.m_button);
+                PickerTool.instance.m_button = null;
             }
 
             UnityEngine.Object.Destroy(GO_FindIt);
             PickerTool.FindIt = null;
-            UnityEngine.Object.Destroy(PickerTool.instance.m_button);
-            PickerTool.instance.m_button = null;
             UnityEngine.Object.Destroy(PickerTool.instance);
             PickerTool.instance = null;
 
