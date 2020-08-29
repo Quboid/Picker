@@ -161,7 +161,7 @@ namespace Picker
 
         private void ShowInPanelResolveGrowables(PrefabInfo pInfo)
         {
-            //Debug.Log($"Hovered: {pInfo.name} ({hoveredId.Type})\nB:{hoveredId.Building}, P/D:{hoveredId.Prop}, PO:{hoveredId.NetLane}, N:{hoveredId.NetNode}, S:{hoveredId.NetSegment}");
+            //Debug.Log($"Hovered: {pInfo.name} ({hoveredId.Type}) <{hoveredId.GetType()}>\nB:{hoveredId.Building}, P/D:{hoveredId.Prop}, PO:{hoveredId.NetLane}, N:{hoveredId.NetNode}, S:{hoveredId.NetSegment}");
             if (!(pInfo is BuildingInfo || pInfo is PropInfo))
             {
                 ShowInPanel(pInfo);
@@ -207,18 +207,7 @@ namespace Picker
             UIButton button = FindComponentCached<UIButton>(info.name);
             if (button != null)
             {
-                if (hoveredId.NetSegment > 0 && isNS2Installed())
-                {
-                    try
-                    {
-                        ReflectIntoNS2();
-                        return;
-                    }
-                    catch (Exception e)
-                    {
-                        Debug.Log($"NS2 failed:\n{e}");
-                    }
-                }
+                // NS2 integration will go here when its menu filter bug is fixed
 
                 UIView.Find("TSCloseButton").SimulateClick();
                 UITabstrip subMenuTabstrip = null;
@@ -249,7 +238,6 @@ namespace Picker
                     return;
                 }
 
-                scrollablePanel.parent.GetComponentInChildren<UIPanel>();
                 menuTabstrip.selectedIndex = menuTabstripIndex;
                 menuTabstrip.ShowTab(menuTabstrip.tabs[menuTabstripIndex].name);
                 subMenuTabstrip.selectedIndex = subMenuTabstripIndex;
@@ -279,6 +267,19 @@ namespace Picker
         private IEnumerator<object> ShowInPanelProcess(UIScrollablePanel scrollablePanel, UIButton button)
         {
             yield return new WaitForSeconds(0.10f);
+
+            if (hoveredId.NetSegment > 0 && isNS2Installed())
+            {
+                try
+                {
+                    ReflectIntoNS2();
+                    yield break;
+                }
+                catch (Exception e)
+                {
+                    Debug.Log($"NS2 failed:\n{e}");
+                }
+            }
 
             button.SimulateClick();
             scrollablePanel.ScrollIntoView(button);
