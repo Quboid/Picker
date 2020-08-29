@@ -86,11 +86,20 @@ namespace Picker
                 FilterDropdown.selectedIndex = MenuIndex[filterEntry];
 
                 MethodInfo picker = Searchbox.GetType().GetMethod("Picker", new Type[] { typeof(PrefabInfo) });
-                if ((bool)picker.Invoke(Searchbox, new object[] { info }))
+                if (!(bool)picker.Invoke(Searchbox, new object[] { info }))
                 {
-                    return;
+                    if (filterEntry == "Growable")
+                    {
+                        FilterDropdown.selectedIndex = MenuIndex["RICO"];
+                        if (!(bool)picker.Invoke(Searchbox, new object[] { info }))
+                        {
+                            Debug.Log($"Object {info.name} not found [P04]");
+                        }
+                        return;
+                    }
+                    Debug.Log($"Object {info.name} not found [P02]");
                 }
-                Debug.Log($"Object {info.name} not found [P02]");
+                return;
             }
 
             // Clear the text box
