@@ -202,9 +202,25 @@ namespace Picker
             }
         }
 
+        private string GetButtonName(PrefabInfo info)
+        {
+            if (info.GetAI() is ExtractingFacilityAI)
+            {
+                BuildingInfo bi = info as BuildingInfo;
+
+                if (bi.name.Contains("Beech")) return bi.name.Replace("Beech", "Alder");
+                if (bi.name.Contains("Conifer")) return bi.name.Replace("Conifer", "Alder");
+                if (bi.name.Contains("Orange")) return bi.name.Replace("Orange", "Apple");
+                if (bi.name.Contains("Pear")) return bi.name.Replace("Pear", "Apple");
+                if (bi.name.Contains("Green House")) return bi.name.Replace("Green House", "Apple");
+            }
+            return info.name;
+        }
+
         private void ShowInPanel(PrefabInfo info)
         {
-            UIButton button = FindComponentCached<UIButton>(info.name);
+            UIButton button = FindComponentCached<UIButton>(GetButtonName(info));
+            //Debug.Log($"Button for {info.name}:{button?.name} <{(button == null ? "null" : button.GetType().ToString())}>");
             if (button != null)
             {
                 // NS2 integration will go here when its menu filter bug is fixed
@@ -231,6 +247,7 @@ namespace Picker
                     current = parent;
                     parent = parent.parent;
                 }
+
                 UITabstrip menuTabstrip = current.Find<UITabstrip>("MainToolstrip");
                 if (scrollablePanel == null || subMenuTabstrip == null || menuTabstrip == null || menuTabstripIndex == -1 || subMenuTabstripIndex == -1)
                 {
