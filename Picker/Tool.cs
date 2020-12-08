@@ -15,6 +15,7 @@ namespace Picker
 
         public static SavedBool doSetFRTMode = new SavedBool("doSetFRT", Picker.settingsFileName, true, true);
         public static SavedBool openMenu = new SavedBool("openMenu", Picker.settingsFileName, true, true);
+        public static SavedBool openMenuNetworks = new SavedBool("openMenuNetworks", Picker.settingsFileName, false, true);
 
         public InstanceID hoveredId = InstanceID.Empty;
 
@@ -116,7 +117,34 @@ namespace Picker
 
         internal void Activate(PrefabInfo info)
         {
-            if (Event.current.control == openMenu)
+            if (openMenu)
+            {
+                if (openMenuNetworks)
+                {
+                    if (info is NetInfo)
+                    {
+                        ActivateCall(true, DefaultPrefab(info));
+                    }
+                    else
+                    {
+                        ActivateCall(false, info);
+                    }
+                }
+                else
+                {
+                    ActivateCall(true, DefaultPrefab(info));
+                }
+                return;
+            }
+            else
+            {
+                ActivateCall(false, info);
+            }
+        }
+
+        internal void ActivateCall(bool open, PrefabInfo info)
+        {
+            if (Event.current.control == open)
             {
                 GetToolFromPrefab(DefaultPrefab(info));
             }

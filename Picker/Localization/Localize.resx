@@ -151,4 +151,7 @@ Hold Control while clicking to invert this behaviour.</value>
   <data name="keybind_ToggleTool" xml:space="preserve">
     <value>Toggle Tool</value>
   </data>
+  <data name="options_OpenMenuNetworks" xml:space="preserve">
+    <value>Only for networks</value>
+  </data>
 </root>

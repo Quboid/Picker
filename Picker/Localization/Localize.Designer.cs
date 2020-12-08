@@ -116,6 +116,15 @@ namespace Picker.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Only for networks.
+        /// </summary>
+        internal static string options_OpenMenuNetworks {
+            get {
+                return ResourceManager.GetString("options_OpenMenuNetworks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reset Button Position.
         /// </summary>
         internal static string options_ResetButtonPosition {
