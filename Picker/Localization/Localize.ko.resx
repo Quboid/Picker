@@ -151,4 +151,7 @@
   <data name="keybind_ToggleTool" xml:space="preserve">
     <value>토글 도구</value>
   </data>
+  <data name="options_OpenMenuNetworks" xml:space="preserve">
+    <value>Only for networks</value>
+  </data>
 </root>
