@@ -151,4 +151,7 @@ Shiftを押しながらクリックしてこの動作を反転します。</valu
   <data name="keybind_ToggleTool" xml:space="preserve">
     <value>ツールの切り替え</value>
   </data>
+  <data name="options_OpenMenuNetworks" xml:space="preserve">
+    <value>Only for networks</value>
+  </data>
 </root>
