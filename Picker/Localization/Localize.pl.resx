@@ -152,6 +152,6 @@ Przytrzymaj Control, aby odwrócić to zachowanie.</value>
     <value>Przełącz Narzędzie</value>
   </data>
   <data name="options_OpenMenuNetworks" xml:space="preserve">
-    <value>Only for networks</value>
+    <value>Tylko dla sieci</value>
   </data>
 </root>
