@@ -152,6 +152,6 @@ Segure a tecla Control e clique para inverter este comportamento.</value>
     <value>Alternar Ferramenta</value>
   </data>
   <data name="options_OpenMenuNetworks" xml:space="preserve">
-    <value>Only for networks</value>
+    <value>Somente para redes</value>
   </data>
 </root>
