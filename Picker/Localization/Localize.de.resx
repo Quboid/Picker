@@ -152,6 +152,6 @@ Halte Shift beim klicken, um das verhalten umzukehren.</value>
     <value>Werkzeug umschalten</value>
   </data>
   <data name="options_OpenMenuNetworks" xml:space="preserve">
-    <value>Only for networks</value>
+    <value>Nur für Netzwerke</value>
   </data>
 </root>
