@@ -152,6 +152,6 @@
     <value>切换工具</value>
   </data>
   <data name="options_OpenMenuNetworks" xml:space="preserve">
-    <value>Only for networks</value>
+    <value>仅用于网络（Networks）</value>
   </data>
 </root>
