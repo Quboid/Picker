@@ -151,6 +151,6 @@ Tenez CTRL pour inverser pendant la sélection d'item.</value>
     <value>Activer l'outil Picker</value>
   </data>
   <data name="options_OpenMenuNetworks" xml:space="preserve">
-    <value>Only for networks</value>
+    <value>Seulement pour les Networks</value>
   </data>
 </root>
