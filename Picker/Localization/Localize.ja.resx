@@ -152,6 +152,6 @@ Shiftを押しながらクリックしてこの動作を反転します。</valu
     <value>ツールの切り替え</value>
   </data>
   <data name="options_OpenMenuNetworks" xml:space="preserve">
-    <value>Only for networks</value>
+    <value>ネットワークに対してのみ</value>
   </data>
 </root>
