@@ -152,6 +152,6 @@ Mantén pulsado Control mientras haces click para invertir esta función.</value
     <value>Activar herramienta</value>
   </data>
   <data name="options_OpenMenuNetworks" xml:space="preserve">
-    <value>Only for networks</value>
+    <value>Sólo para networks</value>
   </data>
 </root>
