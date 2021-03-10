@@ -152,6 +152,6 @@
     <value>Активировать инструмент</value>
   </data>
   <data name="options_OpenMenuNetworks" xml:space="preserve">
-    <value>Only for networks</value>
+    <value>Только для сетевых объектов</value>
   </data>
 </root>
