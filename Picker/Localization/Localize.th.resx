@@ -151,4 +151,7 @@
   <data name="keybind_ToggleTool" xml:space="preserve">
     <value>เปิด/ปิดเครื่องมือ</value>
   </data>
+  <data name="options_OpenMenuNetworks" xml:space="preserve">
+    <value>เฉพาะสิ่งที่ลากเป็นเส้นทาง หรือ Networks เท่านั้น</value>
+  </data>
 </root>

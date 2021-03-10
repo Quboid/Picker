@@ -151,4 +151,7 @@ Halte Shift beim klicken, um das verhalten umzukehren.</value>
   <data name="keybind_ToggleTool" xml:space="preserve">
     <value>Werkzeug umschalten</value>
   </data>
+  <data name="options_OpenMenuNetworks" xml:space="preserve">
+    <value>Nur für Netzwerke</value>
+  </data>
 </root>

@@ -151,4 +151,7 @@ Mantén pulsado Control mientras haces click para invertir esta función.</value
   <data name="keybind_ToggleTool" xml:space="preserve">
     <value>Activar herramienta</value>
   </data>
+  <data name="options_OpenMenuNetworks" xml:space="preserve">
+    <value>Sólo para networks</value>
+  </data>
 </root>

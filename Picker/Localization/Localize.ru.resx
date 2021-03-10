@@ -151,4 +151,7 @@
   <data name="keybind_ToggleTool" xml:space="preserve">
     <value>Активировать инструмент</value>
   </data>
+  <data name="options_OpenMenuNetworks" xml:space="preserve">
+    <value>Только для сетевых объектов</value>
+  </data>
 </root>
