@@ -121,19 +121,19 @@
     <value>Resetta la Posizione della Pulsante</value>
   </data>
   <data name="options_SetFRTMode" xml:space="preserve">
-    <value>Imposta modalità terra/elevata/ecc in Fine Road Tool</value>
+    <value>Imposta modalità terra/elevazione/ecc in Fine Road Tool</value>
   </data>
   <data name="options_SetFRTMode_Tooltip" xml:space="preserve">
-    <value>If FRT is enabled, should Picker set Ground/Elevated/etc to match picked segment?
-Hold Shift while clicking to invert this behaviour.</value>
+    <value>Se FRT è abilitato, Picker dovrebbe impostare Terra/Elevazione/ecc per abbinare il segmento selezionato?
+Tieni premuto il tasto Maiuscolo mentre fai clic per invertire questo comportamento.</value>
     <comment>Try to keep each line length approximately the same length as in English, even if this requires a different number of lines.</comment>
   </data>
   <data name="options_OpenMenu" xml:space="preserve">
     <value>Apri elemento selezionato nel menu</value>
   </data>
   <data name="options_OpenMenu_Tooltip" xml:space="preserve">
-    <value>Should the menu (including Find It) open?
-Hold Control while clicking to invert this behaviour.</value>
+    <value>Il menu (incluso Find It) dovrebbe aprirsi?
+Tieni premuto Control mentre fai clic per invertire questo comportamento.</value>
     <comment>Try to keep each line length approximately the same length as in English, even if this requires a different number of lines.</comment>
   </data>
   <data name="options_NotFound" xml:space="preserve">
@@ -146,10 +146,10 @@ Hold Control while clicking to invert this behaviour.</value>
     <value>Sconosciuto</value>
   </data>
   <data name="mod_Description" xml:space="preserve">
-    <value>Eyedrop any object from the map, by Elektrix and Quboid</value>
+    <value>Usa il selettore (Eyedrop) su qualsiasi oggetto dalla mappa, da Elektrix e Quboid</value>
   </data>
   <data name="keybind_ToggleTool" xml:space="preserve">
-    <value>Toggle Tool</value>
+    <value>Strumento Attiva/Disattiva</value>
   </data>
   <data name="options_OpenMenuNetworks" xml:space="preserve">
     <value>Solo per reti (networks)</value>
