@@ -146,7 +146,7 @@ Tieni premuto Control mentre fai clic per invertire questo comportamento.</value
     <value>Sconosciuto</value>
   </data>
   <data name="mod_Description" xml:space="preserve">
-    <value>Usa il selettore (Eyedrop) su qualsiasi oggetto dalla mappa, da Elektrix e Quboid</value>
+    <value>Usa il selettore su qualsiasi oggetto dalla mappa, da Elektrix e Quboid</value>
   </data>
   <data name="keybind_ToggleTool" xml:space="preserve">
     <value>Strumento Attiva/Disattiva</value>
